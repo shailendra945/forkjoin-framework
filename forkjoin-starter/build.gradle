@@ -1,0 +1,22 @@
+plugins {
+    id 'java-library'
+    id 'io.spring.dependency-management'
+}
+
+dependencies {
+    api 'org.springframework.boot:spring-boot-autoconfigure'
+    api 'org.springframework.boot:spring-boot-starter-amqp'
+    api 'org.springframework.boot:spring-boot-starter-data-jpa'
+    api 'org.springframework:spring-context'
+    api 'com.fasterxml.jackson.core:jackson-databind'
+
+    runtimeOnly 'org.postgresql:postgresql'
+    compileOnly 'org.springframework.boot:spring-boot-starter-web'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
