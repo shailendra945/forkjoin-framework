@@ -1,3 +1,4 @@
 rootProject.name = 'forkjoin-framework'
 include 'forkjoin-starter'
+include 'forkjoin-demo-app'
 

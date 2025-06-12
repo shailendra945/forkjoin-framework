@@ -1,0 +1,19 @@
+forkjoin:
+  subtask-queue-count: 3
+  join-queue: join-queue
+  queues:
+    - name: subtask-1
+      processor: processorA
+    - name: subtask-2
+      processor: processorB
+    - name: subtask-3
+      processor: processorC
+  retry:
+    max-attempts: 3
+  cleanup:
+    retention-days: 7
+  notifications:
+    webhook-url: http://external-system/notify
+  strategies:
+    split: defaultSplitStrategy
+    join:  defaultJoinStrategy
